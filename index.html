@@ -82,6 +82,48 @@
             border: 5px double;    
         }*/
 
+        /*.carousel-item img {
+            max-width: 100%;
+            height: 500px;
+        }*/
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            font-size: 2rem; /* Menyesuaikan ukuran font */
+            background-color: rgba(0, 0, 0, 0.5); /* Memberikan latar belakang berwarna hitam semi-transparan */
+            border-radius: 50%; /* Membuat tombol menjadi bentuk lingkaran */
+            width: 40px; /* Menyesuaikan lebar tombol */
+            height: 40px; /* Menyesuaikan tinggi tombol */
+            line-height: 50px; /* Menyesuaikan posisi teks tombol di tengah */
+            opacity: 1; /* Memberikan kejelasan yang sedikit lebih rendah */
+            transition: all 0.3s ease; /* Efek transisi saat tombol disorot */
+            position: absolute; /* Menjadikan tombol memiliki posisi absolut */
+            top: 40%; /* Menempatkan tombol di tengah vertikal */
+            transform: translateY(-50%); /* Menggeser tombol ke atas sebesar setengah tinggi tombol */
+        }
+
+        .carousel-control-prev {
+            left: 10px; /* Menempatkan tombol prev di sisi kiri */
+        }
+
+        .carousel-control-next {
+            right: 10px; /* Menempatkan tombol next di sisi kanan */
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1; /* Meningkatkan kejelasan saat tombol disorot */
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.8); /* Warna latar belakang dengan opacity */
+            width: 400px; /* Lebar elemen akan menyesuaikan dengan panjang teks */
+            padding: 10px; /* Spasi di sekitar teks */
+            border-radius: 10px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
         .list-group-item {
             background: rgba(0, 0, 0, 0.2);
             border-radius: 10px;
@@ -377,310 +419,253 @@
             <hr class="divider" />
             <div id="portfolio">
                 <div class="container-fluid p-0">
-                    <div class="row g-0">
-                        <div class="col-lg-4 col-sm-6 p-2">
-                            <a class="portfolio-box" href="img/sistem_penggajian/penggajian_dashboard.jpg" title="Sistem Penggajian Karyawan">
-                                <img class="img-fluid" src="img/sistem_penggajian/penggajian_dashboard.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-name">Sistem Penggajian Karyawan</div>
-                                    <div class="project-category text-white-50 pt-3">Order Dari Perusahaan</div>
-                                </div>
-                                <a class="text-decoration-none d-block text-center mt-3" href="project/sistem_penggajian.html">Lihat Detail Program</a>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 p-2">
-                            <a class="portfolio-box" href="img/sistem_akuntansi/akuntansi_dashboard.jpg" title="Sistem Akuntansi">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a class="portfolio-box text-decoration-none" href="img/sistem_penggajian/penggajian_dashboard.jpg" title="Sistem Penggajian Karyawan">
+                                    <img class="img-fluid" src="img/sistem_penggajian/penggajian_dashboard.jpg" alt="..." />
+                                    <div class="portfolio-box-caption">
+                                        <div class="project-name">Sistem Penggajian Karyawan</div>
+                                        <div class="project-category text-white-50 pt-3">Order Dari Perusahaan</div>
+                                    </div>
+                                    <div class="d-flex justify-content-center text-center mt-3">
+                                        <h6><b>Sistem Penggajian Karyawan<br>"Order Dari Perusahaan"</b></h6>
+                                    </div>
+                                    <div class="d-flex justify-content-center mt-1">
+                                        <button class="btn btn-primary btn-sm"><a class="text-decoration-none d-block text-center text-white" href="project/sistem_penggajian.html">Lihat Detail Program</a></button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                              <a class="portfolio-box text-decoration-none" href="img/sistem_akuntansi/akuntansi_dashboard.jpg" title="Sistem Akuntansi">
                                 <img class="img-fluid" src="img/sistem_akuntansi/akuntansi_dashboard.jpg" alt="..." />
                                 <div class="portfolio-box-caption">
                                     <div class="project-name">Sistem Akuntansi</div>
                                     <div class="project-category text-white-50 pt-3">Order Dari Perusahaan</div>
                                 </div>
-                                <a class="text-decoration-none d-block text-center mt-3" href="project/sistem_akuntansi.html">Lihat Detail Program</a>
+                                <div class="d-flex justify-content-center text-center mt-3">
+                                    <h6><b>Sistem Akuntansi<br>"Order Dari Perusahaan"</b></h6>
+                                </div>
+                                <div class="d-flex justify-content-center mt-1">
+                                    <button class="btn btn-primary btn-sm"><a class="text-decoration-none d-block text-center text-white" href="project/sistem_akuntansi.html">Lihat Detail Program</a>
+                                    </button>
+                                </div>
                             </a>
                         </div>
-                        <div class="col-lg-4 col-sm-6 p-2">
-                            <a class="portfolio-box" href="img/sistem_inventoris/inventoris_dashboard.jpg" title="Sistem Inventoris Perusahaan">
-                                <img class="img-fluid" src="img/sistem_inventoris/inventoris_dashboard.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-name">Sistem Inventoris Perusahaan</div>
-                                    <div class="project-category text-white-50 pt-3">Order Dari Perusahaan</div>
-                                </div>
-                                <a class="text-decoration-none d-block text-center mt-3" href="project/sistem_inventoris.html">Lihat Detail Program</a>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 p-2">
-                            <a class="portfolio-box" href="img/sistem_pembagian_komisi/spk_dashboard.jpg" title="Sistem Pembagian Komisi Agen Properti">
-                                <img class="img-fluid" src="img/sistem_pembagian_komisi/spk_dashboard.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-name">Sistem Pembagian Komisi Agen Properti</div>
-                                    <div class="project-category text-white-50 pt-3">Order Dari Perusahaan</div>
-                                </div>
-                                <a class="text-decoration-none d-block text-center mt-3" href="project/sistem_pembagian_komisi.html">Lihat Detail Program</a>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 p-2">
-                            <a class="portfolio-box" href="img/sistem_siak/siak_dashboard.jpg" title="Sistem Informasi Administrasi Kependudukan">
-                                <img class="img-fluid" src="img/sistem_siak/siak_dashboard.jpg" alt="..." />
-                                <div class="portfolio-box-caption p-3">
-                                    <div class="project-name">Sistem Informasi Administrasi Kependudukan</div>
-                                    <div class="project-category text-white-50 pt-3">Tugas Akhir Kuliah</div>
-                                </div>
-                                <a class="text-decoration-none d-block text-center mt-3" href="project/siak.html">Lihat Detail Program</a>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 p-2">
-                            <a class="portfolio-box" href="img/website_profil/sekolah_dashboard.jpg" title="Website Profil Sekolah">
-                                <img class="img-fluid" src="img/website_profil/sekolah_dashboard.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-name">Website Profil Sekolah</div>
-                                    <div class="project-category text-white-50 pt-3">Tugas Kerja Praktek Kuliah</div>
-                                </div>
-                                <a class="text-decoration-none d-block text-center mt-3" href="project/website_profil.html">Lihat Detail Program</a>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="page-section bg-dark text-white" id="testimonial">
-        <div class="container px-4 px-lg-5 text-center">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6 text-center">
-                    <h2 class="mt-0">Testimonial</h2>
-                    <hr class="divider mb-5"/>
-                </div>
-            </div>
-
-            <div class="owl-carousel owl-theme mt-5">
-                <div class="owl-item">
-                    <div class="card">
-                        <div class="img-card">
-                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                        </div>
-                        <div class="testimonial mt-4 mb-2">
-                            <h6>Website penggajian ini sangat bagus dan membantu saya dalam melakukan perhitungan gaji karyawan, fitur-fiturnya juga lengkap serta memudahkan.</h6>
-                        </div>
-                        <div class="name">
-                            <h6 class="overview"><b>Dyula</b>, SPV CV XXX</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="card">
-                        <div class="img-card">
-                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                        </div>
-                        <div class="testimonial mt-4 mb-2">
-                            <h6>Websitenya bagus, terutama navigasi per halaman juga, karena mudah diakses. Yang paling saya suka adalah saya bisa request update fitur.</h6>
-                        </div>
-                        <div class="name d-flex text-center">
-                            <h6 class="overview"><b>Calwa .A</b>, Staff Akuntansi CV XXX</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="card">
-                        <div class="img-card">
-                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                        </div>
-                        <div class="testimonial mt-4 mb-2">
-                            <h6>Ya cukup bagus, saya lebih mudah dalam melakukan pendataan dan pelaporan inventoris perusahaan, Good Job.</h6>
-                        </div>
-                        <div class="name">
-                            <h6 class="overview"><b>Yaoni .A</b>, Staff CS CV XXX</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="card">
-                        <div class="img-card">
-                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                        </div>
-                        <div class="testimonial mt-4 mb-2">
-                            <h6>Website pembagian komisi sangat memudahkan saya saat melakukan pembagian komisi agen properti, penggunaanya juga mudah serta sangat mudah jika saya ingin mencetak laporan.</h6>
-                        </div>
-                        <div class="name">
-                            <h6 class="overview"><b>Diska Kusuma</b>, Staff Admin CV XXX</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="card">
-                        <div class="img-card">
-                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                        </div>
-                        <div class="testimonial mt-4 mb-2">
-                            <h6>Terimakasih buat saudara Moch. Abdul Rohman yang telah membantu kami serta membuatkan website profil untuk sekolah kami.</h6>
-                        </div>
-                        <div class="name">
-                            <h6 class="overview"><b>Dinandari .A</b>, Kepala Sekola SDN XXX Surabaya</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="card">
-                        <div class="img-card">
-                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                        </div>
-                        <div class="testimonial mt-4 mb-2">
-                            <h6>Ya, website cukup bagus dan sesuai dengan yang direncanakan, website mudah melakukan pendataan disertai grafik yang real-time.</h6>
-                        </div>
-                        <div class="name">
-                            <h6 class="overview"><b>Hemmy .W</b>, Dosen Pembimbing</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Call to action-->
-    <!-- <section class="page-section bg-dark text-white" id="testimonial">
-        <div class="container px-4 px-lg-5 text-center">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6 text-center">
-                    <h2 class="mt-0">Testimonial</h2>
-                    <hr class="divider mb-5"/>
-                </div>
-            </div>
-
-            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-                <!-- Carousel indicators
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>   
-                <!-- Wrapper for carousel items
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row mb-5">
-                            <div class="col-sm-6">
-                                <div class="media">
-                                    <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                                    <div class="media-body">
-                                        <div class="testimonial">
-                                            <h6>Website penggajian ini sangat bagus dan membantu saya dalam melakukan perhitungan gaji karyawan, fitur-fiturnya juga lengkap serta memudahkan.</h6>
-                                            <h6 class="overview mb-5"><b>Dyula</b>, SPV CV XXX</h6>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="carousel-item">
+                          <a class="portfolio-box text-decoration-none" href="img/sistem_inventoris/inventoris_dashboard.jpg" title="Sistem Inventoris Perusahaan">
+                            <img class="img-fluid" src="img/sistem_inventoris/inventoris_dashboard.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Sistem Inventoris Perusahaan</div>
+                                <div class="project-category text-white-50 pt-3">Order Dari Perusahaan</div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="media">
-                                    <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                                    <div class="media-body">
-                                        <div class="testimonial">
-                                            <h6>Websitenya bagus, terutama navigasi per halaman juga, karena mudah diakses. Yang paling saya suka adalah saya bisa request update fitur.</h6>
-                                            <h6 class="overview mb-5"><b>Calwa .A</b>, Staff Akuntansi CV XXX</h6>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="d-flex justify-content-center text-center mt-3">
+                                <h6><b>Sistem Inventoris Perusahaan<br>"Order Dari Perusahaan"</b></h6>
                             </div>
-                        </div>          
+                            <div class="d-flex justify-content-center mt-1">
+                                <button class="btn btn-primary btn-sm"><a class="text-decoration-none d-block text-center text-white" href="project/sistem_inventoris.html">Lihat Detail Program</a>
+                                </button>
+                            </div>
+                        </a>
                     </div>
                     <div class="carousel-item">
-                        <div class="row mb-5">
-                            <div class="col-sm-6">
-                                <div class="media">
-                                    <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                                    <div class="media-body">
-                                        <div class="testimonial">
-                                            <h6>Ya cukup bagus, saya lebih mudah dalam melakukan pendataan dan pelaporan inventoris perusahaan, Good Job.</h6>
-                                            <h6 class="overview mb-5"><b>Yaoni .A</b>, Staff CS CV XXX</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="media">
-                                    <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                                    <div class="media-body">
-                                        <div class="testimonial">
-                                            <h6>Website pembagian komisi sangat memudahkan saya saat melakukan pembagian komisi agen properti, penggunaanya juga mudah serta sangat mudah jika saya ingin mencetak laporan.</h6>
-                                            <h6 class="overview mb-5"><b>Diska Kusuma</b>, Staff Admin CV XXX</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>          
+                      <a class="portfolio-box text-decoration-none" href="img/sistem_pembagian_komisi/spk_dashboard.jpg" title="Sistem Pembagian Komisi Agen Properti">
+                        <img class="img-fluid" src="img/sistem_pembagian_komisi/spk_dashboard.jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-name">Sistem Pembagian Komisi Agen Properti</div>
+                            <div class="project-category text-white-50 pt-3">Order Dari Perusahaan</div>
+                        </div>
+                        <div class="d-flex justify-content-center text-center mt-3">
+                            <h6><b>Sistem Pembagian Komisi Agen Properti<br>"Order Dari Perusahaan"</b></h6>
+                        </div>
+                        <div class="d-flex justify-content-center mt-1">
+                            <button class="btn btn-primary btn-sm"><a class="text-decoration-none d-block text-center text-white" href="project/sistem_pembagian_komisi.html">Lihat Detail Program</a>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                  <a class="portfolio-box text-decoration-none" href="img/sistem_siak/siak_dashboard.jpg" title="Sistem Informasi Administrasi Kependudukan">
+                    <img class="img-fluid" src="img/sistem_siak/siak_dashboard.jpg" alt="..." />
+                    <div class="portfolio-box-caption p-3">
+                        <div class="project-name">Sistem Informasi Administrasi Kependudukan</div>
+                        <div class="project-category text-white-50 pt-3">Tugas Akhir Kuliah</div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="row mb-5">
-                            <div class="col-sm-6">
-                                <div class="media">
-                                    <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                                    <div class="media-body">
-                                        <div class="testimonial">
-                                            <h6>Terimakasih buat saudara Moch. Abdul Rohman yang telah membantu kami serta membuatkan website profil untuk sekolah kami.</h6>
-                                            <h6 class="overview mb-5"><b>Dinandari .A</b>, Kepala Sekola SDN XXX Surabaya</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="media">
-                                    <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
-                                    <div class="media-body">
-                                        <div class="testimonial">
-                                            <h6>Ya, website cukup bagus dan sesuai dengan yang direncanakan, website mudah melakukan pendataan disertai grafik yang real-time.</h6>
-                                            <h6 class="overview mb-5"><b>Hemmy .W</b>, Dosen Pembimbing</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>          
+                    <div class="d-flex justify-content-center text-center mt-3">
+                        <h6><b>Sistem Informasi Administrasi Kependudukan<br>"Tugas Akhir Kuliah"</b></h6>
+                    </div>
+                    <div class="d-flex justify-content-center mt-1">
+                        <button class="btn btn-primary btn-sm"><a class="text-decoration-none d-block text-center text-white" href="project/siak.html">Lihat Detail Program</a>
+                        </button>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-item">
+              <a class="portfolio-box text-decoration-none" href="img/website_profil/sekolah_dashboard.jpg" title="Website Profil Sekolah">
+                <img class="img-fluid" src="img/website_profil/sekolah_dashboard.jpg" alt="..." />
+                <div class="portfolio-box-caption">
+                    <div class="project-name">Website Profil Sekolah</div>
+                    <div class="project-category text-white-50 pt-3">Tugas Kerja Praktek Kuliah</div>
+                </div>
+                <div class="d-flex justify-content-center text-center mt-3">
+                    <h6><b>Website Profil Sekolah<br>"Tugas Kerja Praktek Kuliah"</b></h6>
+                </div>
+                <div class="d-flex justify-content-center mt-1">
+                    <button class="btn btn-primary btn-sm"><a class="text-decoration-none d-block text-center text-white" href="project/website_profil.html">Lihat Detail Program</a>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+    </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section bg-dark text-white" id="testimonial">
+    <div class="container px-4 px-lg-5 text-center">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-0">Testimonial</h2>
+                <hr class="divider mb-5"/>
+            </div>
+        </div>
+
+        <div class="owl-carousel owl-theme mt-5">
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        <h6>Website penggajian ini sangat bagus dan membantu saya dalam melakukan perhitungan gaji karyawan, fitur-fiturnya juga lengkap serta memudahkan.</h6>
+                    </div>
+                    <div class="name">
+                        <h6 class="overview"><b>Dyula</b>, SPV CV XXX</h6>
                     </div>
                 </div>
             </div>
-
-        </div>
-    </section> -->
-    <!-- Contact-->
-    <section class="page-section" id="contact">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6 text-center">
-                    <h2 class="mt-0">Hubungi <span class="text-primary">Rohman</span></h2>
-                    <hr class="divider" />
-                    <p class="text-muted mb-5">Butuh bantuan ? Atau ingin pembicaraan lebih lanjut ?, yuk titip pesan di email atau langsung WA saja di nomor berikut : </p>
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        <h6>Websitenya bagus, terutama navigasi per halaman juga, karena mudah diakses. Yang paling saya suka adalah saya bisa request update fitur.</h6>
+                    </div>
+                    <div class="name d-flex text-center">
+                        <h6 class="overview"><b>Calwa .A</b>, Staff Akuntansi CV XXX</h6>
+                    </div>
                 </div>
             </div>
-            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                <div class="col-md-6">
-                    <table style="width: 100%;">
-                      <tbody>
-                        <tr>
-                            <td style="vertical-align: middle; width: 30%;">
-                              <img alt="Gambar" src="https://cdn-icons-png.flaticon.com/512/3536/3536445.png" style="max-width: 70%; padding-top: 30px;" />
-                          </td>
-                          <td style="padding-left: 20px; vertical-align: middle; width: 80%;">
-                            <h2 style="margin-top: 0px;">WhatsApp</h2>
-                            <p style="margin-bottom: 0px;"><a href="https://wa.me/6281233300596">Klik Untuk Kirim Pesan</a></p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        <h6>Ya cukup bagus, saya lebih mudah dalam melakukan pendataan dan pelaporan inventoris perusahaan, Good Job.</h6>
+                    </div>
+                    <div class="name">
+                        <h6 class="overview"><b>Yaoni .A</b>, Staff CS CV XXX</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        <h6>Website pembagian komisi sangat memudahkan saya saat melakukan pembagian komisi agen properti, penggunaanya juga mudah serta sangat mudah jika saya ingin mencetak laporan.</h6>
+                    </div>
+                    <div class="name">
+                        <h6 class="overview"><b>Diska Kusuma</b>, Staff Admin CV XXX</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        <h6>Terimakasih buat saudara Moch. Abdul Rohman yang telah membantu kami serta membuatkan website profil untuk sekolah kami.</h6>
+                    </div>
+                    <div class="name">
+                        <h6 class="overview"><b>Dinandari .A</b>, Kepala Sekola SDN XXX Surabaya</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        <h6>Ya, website cukup bagus dan sesuai dengan yang direncanakan, website mudah melakukan pendataan disertai grafik yang real-time.</h6>
+                    </div>
+                    <div class="name">
+                        <h6 class="overview"><b>Hemmy .W</b>, Dosen Pembimbing</h6>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="col-md-6">
-            <table style="width: 100%;">
-              <tbody>
-                <tr>
-                    <td style="vertical-align: middle; width: 30%;">
-                      <img alt="Gambar" src="https://cdn-icons-png.flaticon.com/512/281/281769.png" style="max-width: 70%; padding-top: 30px;" />
-                  </td>
-                  <td style="padding-left: 20px; vertical-align: middle; width: 80%;">
-                      <h2 style="margin-top: 0px;">Email</h2>
-                      <p style="margin-bottom: 0px;"><a href="mailto:rohman09gre@gmail.com">Klik Untuk Kirim Email</a></p>
-                  </td>
-              </tr>
-          </tbody>
-      </table>
-  </div>
+    </div>
+</section>
+
+<!-- Contact-->
+<section class="page-section" id="contact">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-0">Hubungi <span class="text-primary">Rohman</span></h2>
+                <hr class="divider" />
+                <p class="text-muted mb-5">Butuh bantuan ? Atau ingin pembicaraan lebih lanjut ?, yuk titip pesan di email atau langsung WA saja di nomor berikut : </p>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-md-6">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                        <td style="vertical-align: middle; width: 30%;">
+                          <img alt="Gambar" src="https://cdn-icons-png.flaticon.com/512/3536/3536445.png" style="max-width: 70%; padding-top: 30px;" />
+                      </td>
+                      <td style="padding-left: 20px; vertical-align: middle; width: 80%;">
+                        <h2 style="margin-top: 0px;">WhatsApp</h2>
+                        <p style="margin-bottom: 0px;"><a href="https://wa.me/6281233300596">Klik Untuk Kirim Pesan</a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        <table style="width: 100%;">
+          <tbody>
+            <tr>
+                <td style="vertical-align: middle; width: 30%;">
+                  <img alt="Gambar" src="https://cdn-icons-png.flaticon.com/512/281/281769.png" style="max-width: 70%; padding-top: 30px;" />
+              </td>
+              <td style="padding-left: 20px; vertical-align: middle; width: 80%;">
+                  <h2 style="margin-top: 0px;">Email</h2>
+                  <p style="margin-bottom: 0px;"><a href="mailto:rohman09gre@gmail.com">Klik Untuk Kirim Email</a></p>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 </div>
 </div>
 </section>

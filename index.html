@@ -22,8 +22,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+
     <style type="text/css">
-        .carousel .carousel-item {
+        /*.carousel .carousel-item {
             color: #999;
             overflow: hidden;
             min-height: 120px;
@@ -43,7 +48,7 @@
             position: relative;
         }
         .carousel .testimonial::before {
-            /*content: "\201C";*/
+            content: "\201C";
             font-family: Arial,sans-serif;
             color: #e2e2e2;
             font-weight: bold;
@@ -75,7 +80,7 @@
             color: #fff;
             background: #1c47e3;    
             border: 5px double;    
-        }
+        }*/
 
         .list-group-item {
             background: rgba(0, 0, 0, 0.2);
@@ -93,6 +98,105 @@
         /*.shadow-white {
             filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.6));
         }*/
+
+        .owl-carousel .owl-item {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .owl-carousel .owl-item .card {
+            padding: 30px;
+            position: relative;
+        }
+
+        .owl-carousel .owl-stage-outer {
+            overflow-y: auto !important;
+            padding-bottom: 40px;
+        }
+
+        .owl-carousel .owl-item img {
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .owl-carousel .owl-item .card {
+            /* Pastikan elemen card memiliki posisi relatif */
+            position: relative;
+        }
+
+        .owl-carousel .owl-item .card .name {
+            /* Atur posisi absolut */
+            position: absolute;
+            /* Geser ke tengah horizontal */
+            left: 50%;
+            transform: translateX(-50%);
+            /* Atur penampilan lainnya */
+            bottom: -25px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background-color: #f4623a;
+            padding: 0.8rem 0.3rem;
+            border-radius: 5px;
+            box-shadow: 2px 3px 15px #3c405a;
+
+            /* Atur lebar otomatis */
+            max-width: 80%; /* Misalnya, maksimum 80% lebar dari parent */
+            width: 100%; /* Atur lebar otomatis */
+            text-align: center; /* Pusatkan teks secara horizontal */
+        }
+
+        .testimonial{
+            color: black;
+            padding-bottom: 20px;
+            padding-top: 0px;
+        }
+
+        .owl-carousel .owl-item .card {
+            opacity: 0.2;
+            transform: scale3d(0.8, 0.8, 0.8);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .owl-carousel .owl-item.active.center .card {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+
+        .owl-carousel .owl-dots {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+            height: 20px;
+            background: #fff !important;
+            border-radius: 2px !important;
+            opacity: 0.8;
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span,
+        .owl-theme .owl-dots .owl-dot:hover span {
+            height: 13px;
+            width: 13px;
+            opacity: 1;
+            transform: translateY(2px);
+            background: #f4623a !important;
+        }
+
+        @media(min-width: 480.6px) and (max-width: 575.5px) {
+            .owl-carousel .owl-item .card .name {
+                left: 24%;
+            }
+        }
+
+        @media(max-width: 360px) {
+            .owl-carousel .owl-item .card .name {
+                left: 30%;
+            }
+        }
+
 
     </style>
 
@@ -180,7 +284,6 @@
             </div>
         </section>
 
-
         <!-- About-->
         <section class="page-section bg-dark" id="#">
             <div class="container px-4 px-lg-5">
@@ -251,7 +354,7 @@
                     </div>
 
                     <div class="col-md-6">
-                       <div class="text-center">
+                     <div class="text-center">
                         <h2 class="text-white mt-0">Familiar Dengan</h2>
                         <hr class="divider divider-light" />
                         <div class="col-md-10 mx-auto d-block">
@@ -339,7 +442,6 @@
         </div>
     </section>
 
-    <!-- Call to action-->
     <section class="page-section bg-dark text-white" id="testimonial">
         <div class="container px-4 px-lg-5 text-center">
             <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -349,14 +451,108 @@
                 </div>
             </div>
 
+            <div class="owl-carousel owl-theme mt-5">
+                <div class="owl-item">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                        </div>
+                        <div class="testimonial mt-4 mb-2">
+                            <h6>Website penggajian ini sangat bagus dan membantu saya dalam melakukan perhitungan gaji karyawan, fitur-fiturnya juga lengkap serta memudahkan.</h6>
+                        </div>
+                        <div class="name">
+                            <h6 class="overview"><b>Dyula</b>, SPV CV XXX</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                        </div>
+                        <div class="testimonial mt-4 mb-2">
+                            <h6>Websitenya bagus, terutama navigasi per halaman juga, karena mudah diakses. Yang paling saya suka adalah saya bisa request update fitur.</h6>
+                        </div>
+                        <div class="name d-flex text-center">
+                            <h6 class="overview"><b>Calwa .A</b>, Staff Akuntansi CV XXX</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                        </div>
+                        <div class="testimonial mt-4 mb-2">
+                            <h6>Ya cukup bagus, saya lebih mudah dalam melakukan pendataan dan pelaporan inventoris perusahaan, Good Job.</h6>
+                        </div>
+                        <div class="name">
+                            <h6 class="overview"><b>Yaoni .A</b>, Staff CS CV XXX</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                        </div>
+                        <div class="testimonial mt-4 mb-2">
+                            <h6>Website pembagian komisi sangat memudahkan saya saat melakukan pembagian komisi agen properti, penggunaanya juga mudah serta sangat mudah jika saya ingin mencetak laporan.</h6>
+                        </div>
+                        <div class="name">
+                            <h6 class="overview"><b>Diska Kusuma</b>, Staff Admin CV XXX</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                        </div>
+                        <div class="testimonial mt-4 mb-2">
+                            <h6>Terimakasih buat saudara Moch. Abdul Rohman yang telah membantu kami serta membuatkan website profil untuk sekolah kami.</h6>
+                        </div>
+                        <div class="name">
+                            <h6 class="overview"><b>Dinandari .A</b>, Kepala Sekola SDN XXX Surabaya</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="undraw_profile.svg" class="mr-3 mb-3" alt="">
+                        </div>
+                        <div class="testimonial mt-4 mb-2">
+                            <h6>Ya, website cukup bagus dan sesuai dengan yang direncanakan, website mudah melakukan pendataan disertai grafik yang real-time.</h6>
+                        </div>
+                        <div class="name">
+                            <h6 class="overview"><b>Hemmy .W</b>, Dosen Pembimbing</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to action-->
+    <!-- <section class="page-section bg-dark text-white" id="testimonial">
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0">Testimonial</h2>
+                    <hr class="divider mb-5"/>
+                </div>
+            </div>
+
             <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-                <!-- Carousel indicators -->
+                <!-- Carousel indicators
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
                 </ol>   
-                <!-- Wrapper for carousel items -->
+                <!-- Wrapper for carousel items
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row mb-5">
@@ -440,7 +636,7 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
     <!-- Contact-->
     <section class="page-section" id="contact">
         <div class="container px-4 px-lg-5">
@@ -501,5 +697,31 @@
 <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var silder = $(".owl-carousel");
+        silder.owlCarousel({
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: false,
+            items: 1,
+            stagePadding: 20,
+            center: true,
+            nav: false,
+            margin: 50,
+            dots: true,
+            loop: true,
+            responsive: {
+                0: { items: 1 },
+                480: { items: 2 },
+                575: { items: 2 },
+                768: { items: 2 },
+                991: { items: 3 }
+            // 1200: { items: 4 }
+        }
+    });
+    });
+</script>
 </body>
 </html>
